@@ -171,14 +171,15 @@ if __name__=="__main__":
 	tablename="pk10"
 	conn = sqlite3.connect(db)
 	createtable(conn,tablename)
-	for month in range(1,2):
-		monthstr=str(month)
-		monthstr=monthstr.zfill(2)
-		for day in range(1,31):
-			daystr=str(day)
-			daystr = daystr.zfill(2)
-			date="2017-"+monthstr+"-"+daystr
-			getOnedayDataAndInsert(date,conn,tablename)
+	# for month in range(1,2):
+	# 	monthstr=str(month)
+	# 	monthstr=monthstr.zfill(2)
+	# 	for day in range(1,32):
+	# 		daystr=str(day)
+	# 		daystr = daystr.zfill(2)
+	# 		date="2017-"+monthstr+"-"+daystr
+	# 		getOnedayDataAndInsert(date,conn,tablename)
+	getOnedayDataAndInsert("2016-12-01",conn,tablename)
 
 
 
